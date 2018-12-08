@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Snake</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" media="(max-width: 580px)" href="styles/mobile.css">
+</head>
+<body>
+  <div id="tool-bar">
+    <div id="score">0</div>
+    <div id="pause" class="btn"></div>
+    <div id="replay" class="btn"></div>
+    <div id="operate" class="btn board-btn"></div>
+    <div id="info" class="btn board-btn"></div>
+  </div>
+  <div id="operate-board" class="board">
+    <div id="operate-tool">
+      <div class="dir btn" id="dir-up"></div>
+      <div class="dir btn" id="dir-right"></div>
+      <div class="dir btn" id="dir-down"></div>
+      <div class="dir btn" id="dir-left"></div>
+    </div>
+  </div>
+  <div id="info-board" class="board">info</div>
+  <div id="game">
+    <div id="map"></div>
+  </div>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+#tool-bar {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: auto;
+  height: 50px;
+}
+
+#pause {
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 50%;
+
+  margin: 0 0 0 75px;
+
+  transform: translateX(-50%);
+}
+
+#replay {
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 50%;
+
+  margin: 0 0 0 -75px;
+
+  transform: translateX(-50%);
+}
+
+#operate {
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 50%;
+
+  margin: 0 0 0 133px;
+
+  transform: translateX(-50%);
+}
+
+#info {
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 50%;
+
+  margin: 0 0 0 -133px;
+
+  transform: translateX(-50%);
+}
+
+#score {
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 50%;
+
+  width: 80px;
+  height: 70px;
+  padding: 0;
+
+  transform: translateX(-50%);
+  text-align: center;
+
+  border-radius: 40px 40px 0 0;
+}
+
+.board {
+  bottom: -150px;
+  left: 0;
+
+  width: 100%;
+  height: 200px;
+
+  -webkit-transition: bottom 1s; /* Safari 和 Chrome */
+  -moz-transition: bottom 1s; /* Firefox 4 */
+  -o-transition: bottom 1s; /* Opera */
+  transition: bottom 1s;
+}
+
+.board.show {
+  bottom: 50px;
+  left: 0;
+}
+
+#game {
+  bottom: 50px;
+  left: 0;
+
+  -webkit-transition: bottom 1s; /* Safari 和 Chrome */
+  -moz-transition: bottom 1s; /* Firefox 4 */
+  -o-transition: bottom 1s; /* Opera */
+  transition: bottom 1s;
+}
+
+#game.change {
+  bottom: 250px;
+  left: 0;
+}

@@ -1,0 +1,259 @@
+html {
+  height: 100vh;    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+#tool-bar {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 50px;
+
+  background-color: rgb(110, 230, 133);
+}
+
+#game {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50px;
+
+  -webkit-transition: left 1s; /* Safari 和 Chrome */
+  -moz-transition: left 1s; /* Firefox 4 */
+  -o-transition: left 1s; /* Opera */
+  transition: left 1s;
+
+  background-color: rgb(238, 235, 235);
+}
+
+#game.change {
+  left: 250px;
+}
+
+#map {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* width: 500px; */
+  /* height: 500px; */
+
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+}
+
+#pause {
+  position: absolute;
+  top: 50%;
+
+  margin-top: -84px;
+
+  background-image: url(../images/icons/start.png);
+  background-size: 30px;
+}
+
+#replay {
+  position: absolute;
+  top: 50%;
+
+  display: none;
+
+  margin-top: 65px;
+
+  background-image: url(../images/icons/replay.png);
+}
+
+#operate {
+  position: absolute;
+  top: 50%;
+
+  margin-top: -142px;
+
+  background-image: url(../images/icons/operate.png);
+  background-size: 35px;
+}
+
+#info {
+  position: absolute;
+  top: 50%;
+
+  margin-top: 123px;
+
+  background-image: url(../images/icons/info.png);
+  background-size: 35px;
+}
+
+.board {
+  position: fixed;
+  z-index: 1;
+  left: -150px;
+
+  width: 200px;
+  height: 100vh;
+
+  -webkit-transition: left 1s; /* Safari 和 Chrome */
+  -moz-transition: left 1s; /* Firefox 4 */
+  -o-transition: left 1s; /* Opera */
+  transition: left 1s;
+
+  background-color: rgb(218, 224, 219);
+}
+
+.board.show {
+  left: 50px;
+}
+
+#info-board {
+  z-index: 2;
+
+  background-color: rgb(63, 62, 62);
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+
+  cursor: pointer;
+  -webkit-transition: background-color 0.1s; /* Safari 和 Chrome */
+  -moz-transition: background-color 0.1s; /* Firefox 4 */
+  -o-transition: background-color 0.1s; /* Opera */
+  transition: background-color 0.1s;
+
+  color: white;
+  background-color: rgb(76, 218, 111);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px;
+}
+.btn:hover {
+  background-color: rgb(35, 182, 71);
+}
+.btn:active {
+  background-color: rgb(50, 190, 80);
+}
+
+#score {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 55px;
+  height: 80px;
+  margin-top: -25px;
+  padding-left: 20px;
+
+  color: white;
+  border-radius: 0 40px 40px 0;
+  background-color: rgb(76, 218, 111);
+  box-shadow: 1px 3px 10px rgba(0,0,0,0.4);
+
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 80px;
+}
+
+.snake-item {
+  position: absolute;
+
+  -webkit-box-sizing:border-box; /* Safari */
+  -moz-box-sizing:border-box; /* Firefox */
+  box-sizing:border-box;
+  /* width: 25px; */
+  /* height: 25px; */
+  /* border: 1px solid gray; */
+
+  background-color: dodgerblue;
+}
+
+.snake-item.snake-head {
+  background-color: rgb(216, 52, 52);
+}
+
+.food {
+  position: absolute;
+
+  -webkit-box-sizing:border-box; /* Safari */
+  -moz-box-sizing:border-box; /* Firefox */
+  box-sizing:border-box;
+
+  background-color: green;
+  /* width: 25px; */
+  /* height: 25px; */
+
+  /* border: 1px solid gray; */
+}
+
+#operate-tool {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 130px;
+  height: 130px;
+
+  transform: translate(-65px, -65px);
+}
+
+.dir {
+  position: absolute;
+
+  width: 40px;
+  height: 40px;
+
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+#dir-up {
+  top: 0;
+  left: 50%;
+
+  width: 36px;
+
+  transform: translateX(-50%);
+
+  border-bottom: solid 3px white;
+  border-radius: 20px 20px 0 0;
+}
+
+#dir-down {
+  bottom: 0;
+  left: 50%;
+
+  width: 36px;
+
+  transform: translateX(-50%);
+
+  border-top: solid 3px white;
+  border-radius: 0 0 20px 20px;
+}
+
+#dir-left {
+  top: 50%;
+  left: 0;
+
+  height: 36px;
+
+  transform: translateY(-50%);
+
+  border-right: solid 3px white;
+  border-radius: 20px 0 0 20px;
+}
+
+#dir-right {
+  top: 50%;
+  right: 0;
+
+  height: 36px;
+
+  transform: translateY(-50%);
+
+  border-left: solid 3px white;
+  border-radius: 0 20px 20px 0;
+}
